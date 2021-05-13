@@ -63,4 +63,5 @@ cd / && echo "Wayfcoind -daemon -rpcport=10257 -rpcallowip=127.0.0.1 -rpcuser=ad
 cd / && echo "screen -S parser -d -m python3 watchdog.py parse_bc.py" >> start.sh
 cd / && echo "screen -S api -d -m gunicorn wayfvm_api:app -b 0.0.0.0:3000" >> start.sh
 cd / && echo "/bin/bash" >> start.sh
+cd / && echo "tail -f /dev/null" >> start.sh
 cd / && chmod +x start.sh
