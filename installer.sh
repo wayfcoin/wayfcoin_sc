@@ -58,7 +58,7 @@ pip3 install flask pymysql requests scp paramiko gunicorn flask-recaptcha tqdm
 #screen -S parser -d -m python3 watchdog.py parse_bc.py
 #screen -S api -d -m gunicorn wayfvm_api:app -b 0.0.0.0:3000
 cd / && echo "/etc/init.d/mysql start" > start.sh
-cd / && echo "cd smart_contract_api" >> start.sh
+cd / && echo "cd wayfcoin_sc" >> start.sh
 cd / && echo "Wayfcoind -daemon -rpcport=10257 -rpcallowip=127.0.0.1 -rpcuser=admin -rpcpassword=123 -addnode=194.58.104.157" >> start.sh
 cd / && echo "screen -S parser -d -m python3 watchdog.py parse_bc.py" >> start.sh
 cd / && echo "screen -S api -d -m gunicorn wayfvm_api:app -b 0.0.0.0:3000" >> start.sh
